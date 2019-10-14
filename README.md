@@ -15,3 +15,10 @@ directory](docs/).
 ## License
 
 This project is open sourced under MIT License.
+# Repo consumed by https://github.com/red-hat-storage/ocs-ci
+
+Repo will contain workload files to setup
+
+- AMQ
+- Couchbase
+- Logging
