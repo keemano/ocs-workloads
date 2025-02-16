@@ -28,6 +28,8 @@ spec:
         volumeMounts:
         - mountPath: /mnt/test
           name: mypvc
+        - mountPath: /mnt/test2
+          name: mypvc2
       containers:
       - command: ["/bin/sh", "-c"]
         args:
@@ -46,8 +48,14 @@ spec:
         volumeMounts:
         - mountPath: /mnt/test
           name: mypvc
+        - mountPath: /mnt/test2
+          name: mypvc2
       volumes:
       - name: mypvc
         persistentVolumeClaim:
           claimName: busybox-pvc-1
+          readOnly: false
+      - name: mypvc2
+        persistentVolumeClaim:
+          claimName: busybox-pvc-2
           readOnly: false
